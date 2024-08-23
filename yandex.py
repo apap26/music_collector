@@ -1,3 +1,4 @@
+import os
 import re
 from yandex_music import Client
 
@@ -18,5 +19,8 @@ def yandex_download_favorite(tk, directory):
                  .replace(">", "")
                  .replace("|", ""))
         name = directory + title + " - " + i.artistsName()[0] + ".mp3"
-        i.download(name)
-        print("Downloaded " + name)
+        if (os.path.exists(name)) == False:
+            i.download(name)
+            print("Downloaded " + name)
+        else:
+            print("skip " + name)
