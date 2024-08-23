@@ -1,5 +1,8 @@
 {
   "yandex":{
+    "playlists": [
+      "31817229"
+    ],
     "token": "music_token",
     "root_path": "music/"
   },
